@@ -10,7 +10,7 @@ void mgs2_fmv(float aspect_ratio) {
     int fmv_borders_top;
     int a_fmv_borders_top = 0x0057D295;
     int a_fmv_borders_bottom = 0x0057D28F;
-    char a_fmv_resize_opcode = 0x0057D263;
+    //char a_fmv_resize_opcode = 0x0057D263;
 
     if (aspect_ratio == aspect_ratio_4x3) {
         fmv_borders_bottom = 524;

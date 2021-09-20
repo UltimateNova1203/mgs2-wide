@@ -10,20 +10,20 @@ void mgs2_ini_create_config() {
     ini_config.SetValue("display", NULL, NULL, "; Display Section");
     ini_config.SetLongValue("display", "horizontal", 16, "; The aspect ratio width, Default \"16\"");
     ini_config.SetLongValue("display", "vertical", 9, "; The aspect ratio height, Default \"9\"");
-    ini_config.SetBoolValue("display", "fix_fov", "true", "; Adjust the FOV to match display, Default \"true\"");
-    ini_config.SetBoolValue("display", "fix_dof", "true", "; Fixes the Depth of Field issue, Default \"true\"");
-    ini_config.SetBoolValue("display", "fix_fmv", "true", "; Adjusts FMV size to match display size, Default \"true\"");
-    ini_config.SetBoolValue("display", "camera_zoom", "true", "; Adjusts the Camera Zoom to hide out of bounds, Default \"true\"");
+    ini_config.SetBoolValue("display", "fix_fov", true, "; Adjust the FOV to match display, Default \"true\"");
+    ini_config.SetBoolValue("display", "fix_dof", true, "; Fixes the Depth of Field issue, Default \"true\"");
+    ini_config.SetBoolValue("display", "fix_fmv", true, "; Adjusts FMV size to match display size, Default \"true\"");
+    ini_config.SetBoolValue("display", "camera_zoom", true, "; Adjusts the Camera Zoom to hide out of bounds, Default \"true\"");
 
     //Borders Section
     ini_config.SetValue("borders", NULL, NULL, "; Borders Section");
-    ini_config.SetBoolValue("borders", "enabled", "true", "; Enables borders in cutscenes, Default \"true\"");
-    ini_config.SetBoolValue("borders", "cinematic", "true", "; Uses cinematic size borders, Default \"true\"");
+    ini_config.SetBoolValue("borders", "enabled", true, "; Enables borders in cutscenes, Default \"true\"");
+    ini_config.SetBoolValue("borders", "cinematic", true, "; Uses cinematic size borders, Default \"true\"");
 
     //Cheats Section
     ini_config.SetValue("cheats", NULL, NULL, "; Cheats Section");
-    ini_config.SetBoolValue("cheats", "drebin", "false", "; Gives max ammo for weapons you have, Default \"false\"");
-    ini_config.SetBoolValue("cheats", "solidus", "false", "; Gives infinite O2 during Solidus torture sequence, Default \"false\"");
+    ini_config.SetBoolValue("cheats", "drebin", false, "; Gives max ammo for weapons you have, Default \"false\"");
+    ini_config.SetBoolValue("cheats", "solidus", false, "; Gives infinite O2 during Solidus torture sequence, Default \"false\"");
 
     SI_Error update_config = ini_config.SaveFile("mgs2-config.ini");
     if (update_config < 0) {

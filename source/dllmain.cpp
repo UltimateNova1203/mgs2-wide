@@ -26,18 +26,18 @@ void mgs2_main() {
     //Display Section
     int display_horizontal = ini_config.GetLongValue("display", "horizontal", 16);
     int display_vertical = ini_config.GetLongValue("display", "vertical", 9);
-    bool display_fix_fov = ini_config.GetBoolValue("display", "fix_fov", "true");
-    bool display_fix_dof = ini_config.GetBoolValue("display", "fix_dof", "true");
-    bool display_fix_fmv = ini_config.GetBoolValue("display", "fix_fmv", "true");
-    bool display_camera_zoom = ini_config.GetBoolValue("display", "camera_zoom", "true");
+    bool display_fix_fov = ini_config.GetBoolValue("display", "fix_fov", true);
+    bool display_fix_dof = ini_config.GetBoolValue("display", "fix_dof", true);
+    bool display_fix_fmv = ini_config.GetBoolValue("display", "fix_fmv", true);
+    bool display_camera_zoom = ini_config.GetBoolValue("display", "camera_zoom", true);
 
     //Borders Section
-    bool borders_enable = ini_config.GetBoolValue("borders", "enabled", "true");
-    bool borders_cinematic = ini_config.GetBoolValue("borders", "cinematic", "true");
+    bool borders_enable = ini_config.GetBoolValue("borders", "enabled", true);
+    bool borders_cinematic = ini_config.GetBoolValue("borders", "cinematic", true);
 
     //Cheats Section
-    bool cheats_drebin = ini_config.GetBoolValue("cheats", "drebin", "false");
-    bool cheats_solidus = ini_config.SetBoolValue("cheats", "solidus", "false");
+    bool cheats_drebin = ini_config.GetBoolValue("cheats", "drebin", false);
+    bool cheats_solidus = ini_config.GetBoolValue("cheats", "solidus", false);
 
     float aspect_ratio = float(display_horizontal) / float(display_vertical);
 
