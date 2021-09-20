@@ -11,16 +11,10 @@
 
 void mgs2_main() {
     CSimpleIniA ini_config;
-    CSimpleIniA ini_fov;
 
     SI_Error load_config = ini_config.LoadFile("mgs2-config.ini");
     if (load_config < 0) {
         mgs2_ini_create_config();
-    }
-
-    SI_Error load_fov = ini_fov.LoadFile("mgs2-fov.ini");
-    if (load_fov < 0) {
-        mgs2_ini_create_fov();
     }
 
     //Display Section
@@ -55,9 +49,9 @@ void mgs2_main() {
     mgs2_fmv(aspect_ratio, display_fix_fmv);
     }*/
 
-    /*if (display_camera_zoom == true) {
+    if (display_camera_zoom == true) {
         mgs2_camera(aspect_ratio);
-    }*/
+    }
 
     /*if (cheats_drebin == true) {
         CreateThread(0, 0, (LPTHREAD_START_ROUTINE)&mgs2_drebin, 0, 0, NULL);
