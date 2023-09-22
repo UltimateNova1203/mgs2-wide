@@ -1,5 +1,5 @@
 # MGS2: Widescreen Edition
-An open source widescreen enhancement for Metal Gear Solid 2: Substance.
+An open source widescreen enhancement for Metal Gear Solid 2: Substance (2003). This is ***not*** for the Master Collection
 
 ## Installation
 Please ensure you are currently using V's Fix, which you can find here: https://github.com/VFansss/mgs2-v-s-fix
